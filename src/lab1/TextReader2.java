@@ -13,8 +13,8 @@ import java.io.IOException;
  *
  * @author User
  */
-public class TextReader {
-    public static void main(String[] args) {
+public class TextReader2 {
+     public static void main(String[] args) {
 	
 	File data = new File(File.separatorChar + "temp" + File.separatorChar 
                         + "test.txt");
@@ -29,16 +29,20 @@ public class TextReader {
         String temp[] = null;
         String output;
         BufferedReader in = null;
+        int count;
         try {
 	   in = new BufferedReader(new FileReader(data));
 	   String line = in.readLine();
-           
+           count=0;
 	   while(line != null){
+               if(count == 1){
                temp = line.split("\\|");
 		  output = "Name: " + temp[FIRST_NAME] + " " + temp[LAST_NAME] + 
                           "\nPhone Number:" + temp[PHONE_NUMBER] + "\nAddress: " 
                 + temp[ADDRESS] + temp[CITY_STATE] + temp[ZIP];
                   System.out.println(output);
+               }
+               count++;
 		  line = in.readLine();
 	   }
 	 
@@ -57,6 +61,4 @@ public class TextReader {
        // System.out.println(output);
         
     } // end main
-} // end class
-
-
+}
