@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab1;
+package lab3;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,8 +13,8 @@ import java.io.IOException;
  *
  * @author User
  */
-public class TextReader2 {
-     public static void main(String[] args) {
+public class TextReader3 {
+    public static void main(String[] args) {
 	
 	File data = new File(File.separatorChar + "temp" + File.separatorChar 
                         + "test.txt");
@@ -56,9 +56,5 @@ public class TextReader2 {
             }
         }
 
-        
-        
-       // System.out.println(output);
-        
-    } // end main
+    }
 }
